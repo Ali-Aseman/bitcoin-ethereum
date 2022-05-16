@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cryptocurrency</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="cryptocurrencies-FINISHED/css/style.css">
+</head>
+<body>
+    <div>
+        <h1 class="center">Cryptocurrency Rates Calculator</h1>
+    </div>
+    <div class="container main-content">
+        <!-- Page Content goes here -->
+        <div class="row">
+            <form class="col s8 offset-s2" id="form">
+                <div class="row">
+                    <div class="form">
+                        <div class="input-field col s12">
+                                <select id="currency">
+                                    <option value="" disabled selected>- Select Currency - </option>
+                                    <option value="USD">Dollor</option>
+                                    <option value="GBP">Pound</option>
+                                    <option value="EUR">Euro</option>
+                                </select>
+                                <label>- Select Currency - </label>
+                        </div>    
+                        <div class="input-field col s12">
+                            <select id="cryptocurrency">
+                                <option value="" disabled selected>- Select Cryptocurrency -</option>
+                                <option value="BTC">Bitcoin</option>
+                                <option value="ETH">Ethereum</option>
+                                <option value="XRP">Ripple</option>
+                            </select>
+                            <label>- Select Cryptocurrency -</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <button class="btn waves-effect waves-light orange darken-3" type="submit" name="action">Get Valuation
+                                <i class="material-icons right">attach_money</i>
+                            </button>
+                        </div>
+                        <div class="messages col s12"></div>
+                        <div class="spinner"></div>
+                        <div id="result" class="col s12"></div>
+                    </div><!--.formulario-cotizar-->
+                  
+                </div>
+            </form>
+        </div>
+
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+
+
+    <script src="js/cryptoAPI.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+            (function() {
+                $(document).ready(function(){
+                    setTimeout(() => {
+                        $('select').select();
+                    }, 10);
+                });
+            })(jQuery);
+        </script>
+      <style>
+          
+          body {
+            background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #000000, #000000); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #777777, #281e1e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          }
+          h1 {
+              font-size: 34px;
+              color: black;
+              font-family: 'Playfair Display', serif;
+          }
+          form {
+              margin: 50px auto;
+          }
+          .main-content {
+              margin: 50px auto;
+              background-color: rgb(0, 0, 0);
+              -webkit-box-shadow: -1px 20px 52px -13px rgba(255, 255, 255, 0.75);
+                -moz-box-shadow: -1px 20px 52px -13px rgba(255, 255, 255, 0.75);
+                box-shadow: -1px 20px 52px -13px rgba(255, 255, 255, 0.75);
+          }
+          .messages {
+              color: rgb(0, 0, 0);
+          }
+          #result {
+                text-align: center;
+          }
+          .btn {
+              width: 100%;
+          }
+          .spinner  {
+              text-align: center;
+          }
+      </style>
+</body>
+</html>
