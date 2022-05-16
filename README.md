@@ -1,6 +1,8 @@
 # bitcoin-ethereum
 یه پروژه جذاب با جاوا اسکریپت...که قیمت بیت کوین واتریوم رو به صورت لایو به شما نشان میدهد :) 
 
+نکته مهم => حتما افزونه live server رو داخل vs code خود دانلود کنید و روی لایو بالا بیاورید .....اگر این کارو انجام ندهید api از وب سایت مورد نظر خوانده نمیشود 
+
 ![image](https://user-images.githubusercontent.com/96992358/168624618-95403110-4b43-4fc8-9709-81362c56a32b.png)
 ![image](https://user-images.githubusercontent.com/96992358/168624723-1a4edaf2-9e87-44fa-b14d-93bd2b67306f.png)
 
